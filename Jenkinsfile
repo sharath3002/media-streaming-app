@@ -29,7 +29,7 @@ pipeline {
             steps {
                 script {
                     sh '''
-                    ibmcloud login --apikey m5KKzGAsxGjzkdFCACDADZTib359QwVKEfZG6mm76bYZ -r in-che -g default
+                    ibmcloud login --apikey  -r in-che -g default
                     ibmcloud ks cluster config --cluster $CLUSTER_NAME
                     kubectl apply -f k8s/deployment.yaml
                     '''
